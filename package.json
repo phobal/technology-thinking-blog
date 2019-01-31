@@ -9,6 +9,7 @@
   ],
   "license": "MIT",
   "main": "n/a",
+  "homePage": "https://phobal.github.io/technology-thinking-blog",
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
