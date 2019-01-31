@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/component---src-templates-post-tsx.a3f47ba95bfcb7ece2a3.css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.0.25"/><title data-react-helmet="true">React 生命周期 | Back To Home</title><meta data-react-helmet="true" name="description"/><meta data-react-helmet="true" name="image" content="https://phobal.github.io/assets/banner.jpg"/><meta data-react-helmet="true" property="og:locale" content="en_US"/><meta data-react-helmet="true" property="og:site_name" content="phobal"/><meta data-react-helmet="true" property="og:url" content="https://phobal.github.ioreact-生命周期"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="React 生命周期"/><meta data-react-helmet="true" property="og:description"/><meta data-react-helmet="true" property="og:image" content="https://phobal.github.io/assets/banner.jpg"/><meta data-react-helmet="true" property="fb:app_id" content=""/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="@phobal"/><meta data-react-helmet="true" name="twitter:title" content="React 生命周期"/><meta data-react-helmet="true" name="twitter:url" content="https://phobal.github.io"/><meta data-react-helmet="true" name="twitter:description"/><meta data-react-helmet="true" name="twitter:image" content="https://phobal.github.io/assets/banner.jpg"/><script data-react-helmet="true" type="application/ld+json">[{"@context":"http://schema.org","@type":"BlogPosting","@id":"https://phobal.github.ioreact-生命周期","url":"https://phobal.github.ioreact-生命周期","name":"React 生命周期","alternateName":"博客主要","headline":"React 生命周期","image":{"@type":"ImageObject","url":"https://phobal.github.io/assets/banner.jpg"},"description":"Typescript Power Blog with big typography","datePublished":"11.02.2016","dateModified":"11.02.2016","author":{"@type":"Person","name":"Phobal"},"publisher":{"@type":"Organization","name":"Phobal","logo":{"@type":"ImageObject","url":"https://phobal.github.io/assets/logo.png"}},"isPartOf":"https://phobal.github.io/","mainEntityOfPage":{"@type":"WebSite","@id":"https://phobal.github.io/"}}]</script><style data-styled="fFeSAL cFflVA hCLstk joVNRH kZOSEM fdDfEO hwWRzJ fdsQdM gxmWKo fQDPxI lieawP gMmoFA geaCVN bsKCRk fGKmEA fVrxes brHMyj wYjQe fepOnV" data-styled-version="4.0.0">
+/* sc-component-id: Subline-r0qb95-0 */
+.fQDPxI{font-size:0.9rem;}.lieawP{font-size:0.9rem;color:rgba(255,255,255,0.7);text-align:center;}.gMmoFA{font-size:0.9rem;color:rgba(255,255,255,0.7);}
+/* sc-component-id: Article__Post-sc-1jqucgb-0 */
+.hwWRzJ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin-top:3.5rem;margin-bottom:3.5rem;}
+/* sc-component-id: Article__Title-sc-1jqucgb-1 */
+.fdsQdM{position:relative;text-shadow:0 12px 30px rgba(0,0,0,0.15);margin-bottom:0.75rem;}
+/* sc-component-id: Article__Initiale-sc-1jqucgb-2 */
+.gxmWKo{position:absolute;font-size:7rem;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);opacity:0.08;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:-1;}
+/* sc-component-id: Article__Excerpt-sc-1jqucgb-3 */
+.geaCVN{grid-column:-1 / 1;margin-top:1rem;margin-bottom:1rem;}
+/* sc-component-id: Header__HeaderWrapper-sc-90z1o6-0 */
+.fFeSAL{position:relative;background:linear-gradient( -185deg,rgba(204,157,0,0.6),rgba(200,186,90,0.8) ),url(/assets/bg.png) no-repeat;background-size:cover;padding:8rem 2rem 10rem;text-align:center;} .fFeSAL::after{background:transparent url(/assets/mask.svg) no-repeat bottom left;background-size:101%;bottom:-2px;content:'';display:block;height:100%;left:0;position:absolute;width:100%;} @media (max-width:1200px){.fFeSAL{padding:4rem 2rem 6rem;}} @media (max-width:600px){.fFeSAL{padding:1rem 0.5rem 2rem;}}
+/* sc-component-id: Header__Content-sc-90z1o6-1 */
+.cFflVA{position:relative;z-index:999;} .cFflVA a{color:white;} .cFflVA a:hover{opacity:0.85;color:white;}
+/* sc-component-id: sc-global-995123355 */
+::selection{color:#fff;background:#ffc400;} body{background:#fff;color:rgba(0,0,0,0.7);} @media (max-width:600px){body{font-size:14px;}} a{color:rgba(179,164,60,0.9);-webkit-text-decoration:none;text-decoration:none;-webkit-transition:all 0.5s;transition:all 0.5s;} a:hover{color:#ffc400;} h1,h2,h3,h4{color:rgba(179,164,60,0.9);} blockquote{font-style:italic;position:relative;} blockquote:before{content:"";position:absolute;background:#ffc400;height:100%;width:6px;margin-left:-1.6rem;} label{margin-bottom:.5rem;color:rgba(179,164,60,0.9);} input,textarea{border-radius:.5rem;border:none;background:rgba(0,0,0,0.05);padding:.25rem 1rem;} input:focus,textarea:focus{outline:none;} .textRight{text-align:right;}
+/* sc-component-id: Layout__Footer-vba7vf-0 */
+.bsKCRk{text-align:center;padding:3rem 0;} .bsKCRk span{font-size:0.75rem;}
+/* sc-component-id: PrevNext__Wrapper-sc-1bejvtc-0 */
+.brHMyj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:6rem auto 0 auto;justify-items:center;} .brHMyj a{color:#ffc400;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+/* sc-component-id: PrevNext__Prev-sc-1bejvtc-1 */
+.wYjQe span{text-transform:uppercase;font-size:0.8rem;color:rgba(0,0,0,0.5);}
+/* sc-component-id: PrevNext__Next-sc-1bejvtc-2 */
+.fepOnV{margin-left:auto;text-align:right;} .fepOnV span{text-transform:uppercase;font-size:0.8rem;color:rgba(0,0,0,0.5);}
+/* sc-component-id: SectionTitle-sc-1hec8w9-0 */
+.hCLstk{font-size:2.9rem;text-transform:uppercase;text-align:center;color:#fff;position:relative;padding:2rem 0 0;margin-bottom:2rem;} .hCLstk:after{content:'';height:1px;width:50px;position:absolute;bottom:0;left:50%;margin-left:-25px;background:#fff;}.joVNRH{font-size:2.9rem;text-transform:normal;text-align:center;color:#fff;position:relative;padding:2rem 0 0;margin-bottom:2rem;} .joVNRH:after{content:'';height:1px;width:50px;position:absolute;bottom:0;left:50%;margin-left:-25px;background:#fff;}
+/* sc-component-id: Wrapper-sc-1t16n0z-0 */
+.kZOSEM{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:0 auto;max-width:100rem;padding:0 6rem;} @media (max-width:1200px){.kZOSEM{padding:0 3rem;}} @media (max-width:600px){.kZOSEM{padding:0 1rem;}}
+/* sc-component-id: Content-sc-8oa00p-0 */
+.fdDfEO{box-shadow:0 4px 120px rgba(0,0,0,0.1);border-radius:1rem;padding:2rem 4rem;background-color:#fff;z-index:9000;margin-top:-4rem;} .fdDfEO form p label,.fdDfEO form p input{display:block;} .fdDfEO form p input{min-width:275px;} .fdDfEO form p textarea{resize:vertical;min-height:150px;width:100%;} @media (max-width:1200px){.fdDfEO{padding:3rem 3rem;}} @media (max-width:600px){.fdDfEO{padding:2rem 1.5rem;}}
+/* sc-component-id: Title-oe4xmp-0 */
+.fGKmEA{position:relative;text-shadow:0 12px 30px rgba(0,0,0,0.15);margin-bottom:0.75rem;}
+/* sc-component-id: Post__PostContent-oxxabx-0 */
+.fVrxes{margin-top:4rem;}</style><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer', 'GTM-MVP42QK');</script><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.66 'Open Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Open Sans',sans-serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;color:inherit;font-family:'Bitter',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:3.157rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;color:inherit;font-family:'Bitter',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.99326rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;color:inherit;font-family:'Bitter',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58383rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;color:inherit;font-family:'Bitter',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;color:inherit;font-family:'Bitter',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79459rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;color:inherit;font-family:'Bitter',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.7083rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}ul{margin-left:1.66rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.66rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;font-size:0.85rem;line-height:1.66rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;font-size:1rem;line-height:1.66rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}blockquote{margin-left:1.66rem;margin-right:1.66rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.66rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.66rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.66rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.66rem;margin-bottom:calc(1.66rem / 2);margin-top:calc(1.66rem / 2);}li > ul{margin-left:1.66rem;margin-bottom:calc(1.66rem / 2);margin-top:calc(1.66rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.66rem / 2);}code{font-size:0.85rem;line-height:1.66rem;}kbd{font-size:0.85rem;line-height:1.66rem;}samp{font-size:0.85rem;line-height:1.66rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.10667rem;padding-right:1.10667rem;padding-top:0.83rem;padding-bottom:calc(0.83rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><link href="//fonts.googleapis.com/css?family=Bitter:700|Open+Sans:400" rel="stylesheet" type="text/css"/><link rel="shortcut icon" href="/icons/icon-48x48.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#3498DB"/><link as="script" rel="preload" href="/component---src-templates-post-tsx-f283cf95376f69b846f6.js"/><link as="script" rel="preload" href="/0-2d0cb1e440759cfe9af4.js"/><link as="script" rel="preload" href="/app-e7860e738958d6947bfb.js"/><link as="script" rel="preload" href="/webpack-runtime-a3934fd4707e1982fb96.js"/><link rel="preload" href="/static/d/667/path---blog-react-生命周期-e-7-c-ed7-Tk8EtiMkkyi5ayJHPu0HmDtUQ.json" as="fetch" crossOrigin="use-credentials"/></head><body><noscript><iframe
+  src="https://www.googletagmanager.com/ns.html?id=GTM-MVP42QK"
+  height="0"
+  width="0"
+  style="display: none; visibility: hidden"
+></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><header class="Header__HeaderWrapper-sc-90z1o6-0 fFeSAL"><div class="Header__Content-sc-90z1o6-1 cFflVA"><a href="/">Back To Home</a><div class="SectionTitle-sc-1hec8w9-0 joVNRH">React 生命周期</div><div class="Subline-r0qb95-0 gMmoFA">11.02.2016<!-- --> — <!-- -->2<!-- --> Min Read — In<!-- --> <a href="/categories/tech">Tech</a></div></div></header><div class="Wrapper-sc-1t16n0z-0 kZOSEM"><div class="Content-sc-8oa00p-0 fdDfEO"><div class="Post__PostContent-oxxabx-0 fVrxes"><h2 id="生命周期方法"><a href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%96%B9%E6%B3%95" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>生命周期方法</h2>
+<p>组件的生命周期主要包括以下几种情况</p>
+<ul>
+<li>
+<p>组件被实例化的时候</p>
+</li>
+<li>
+<p>组件属性改变的时候</p>
+</li>
+<li>
+<p>组件状态被改变的时候</p>
+</li>
+<li>
+<p>组件被销毁的时候</p>
+</li>
+<li>
+<p>componentWillMount</p>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">void</span> <span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<p>条件：第一次渲染阶段在调用 render 方法前会被调用
+作用：该方法在整个组件生命周期只会被调用一次，所以可以利用该方法做一些组件内部的初始化工作</p>
+<ol start="2">
+<li>componentDidMount</li>
+</ol>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">void</span> <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<p>条件：第一次渲染成功过后，组件对应的 DOM 已经添加到页面后调用
+作用：这个阶段表示组件对应的 DOM 已经存在，我们可以在这个时候做一些依赖 DOM 的操作或者其他的一些如请求数据，和第三方库整合的操作。如果嵌套了子组件，子组件会比父组件优先渲染，所以这个时候可以获取子组件对应的 DOM。</p>
+<ol start="3">
+<li>componentWillReceiveProps(newProps)</li>
+</ol>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">void</span> <span class="token function">componentWillReceiveProps</span><span class="token punctuation">(</span>
+  object nextProps
+<span class="token punctuation">)</span></code></pre></div>
+<p>条件： 当组件获取新属性的时候，第一次渲染不会调用
+用处： 这个时候可以根据新的属性来修改组件状态</p>
+<p>eg:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">componentWillReceiveProps<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nextProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    likesIncreasing<span class="token punctuation">:</span> nextProps<span class="token punctuation">.</span>likeCount <span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>likeCount
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>注意： 这个时候虽说是获取新属性，但并不能确定属性一定改变了，例如一个组件被多次渲染到 DOM 中，如下面：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> Component <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createClass</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  componentWillReceiveProps<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nextProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'componentWillReceiveProps'</span><span class="token punctuation">,</span> nextProps<span class="token punctuation">.</span>data<span class="token punctuation">.</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  render<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span> <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>data<span class="token punctuation">.</span>bar<span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'container'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> mydata <span class="token operator">=</span> <span class="token punctuation">{</span>bar<span class="token punctuation">:</span> <span class="token string">'drinks'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Component data<span class="token operator">=</span><span class="token punctuation">{</span>mydata<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> container<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Component data<span class="token operator">=</span><span class="token punctuation">{</span>mydata<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> container<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Component data<span class="token operator">=</span><span class="token punctuation">{</span>mydata<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> container<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>结果会输出两次 componentWillReceiveProps，虽然属性数据没有改变，但是仍然会调用 componentWillReceiveProps 方法。</p>
+<ol start="4">
+<li>shouldComponentUpdate(nextProps, nextState)</li>
+</ol>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">boolean <span class="token function">shouldComponentUpdate</span><span class="token punctuation">(</span>
+  object nextProps<span class="token punctuation">,</span> object nextState
+<span class="token punctuation">)</span></code></pre></div>
+<p>条件： 接收到新属性或者新状态的时候在 render 前会被调用（除了调用 forceUpdate 和初始化渲染以外）
+用处： 该方法让我们有机会决定是否重渲染组件，如果返回 false，那么不会重渲染组件，借此可以优化应用性能（在组件很多的情况）。</p>
+<ol start="5">
+<li>componentWillUpdate</li>
+</ol>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">void</span> <span class="token function">componentWillUpdate</span><span class="token punctuation">(</span>
+  object nextProps<span class="token punctuation">,</span> object nextState
+<span class="token punctuation">)</span></code></pre></div>
+<p>条件：当组件确定要更新，在 render 之前调用
+用处：这个时候可以确定一定会更新组件，可以执行更新前的操作
+注意：方法中不能使用 setState ，setState 的操作应该在 componentWillReceiveProps 方法中调用</p>
+<ol start="6">
+<li>componentDidUpdate</li>
+</ol>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">void</span> <span class="token function">componentWillUpdate</span><span class="token punctuation">(</span>
+  object nextProps<span class="token punctuation">,</span> object nextState
+<span class="token punctuation">)</span></code></pre></div>
+<p>条件：当组件确定要更新，在 render 之前调用
+用处：这个时候可以确定一定会更新组件，可以执行更新前的操作
+注意：方法中不能使用 setState ，setState 的操作应该在 componentWillReceiveProps 方法中调用</p>
+<ol start="7">
+<li>componentDidUpdate</li>
+</ol>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">void</span> <span class="token function">componentDidUpdate</span><span class="token punctuation">(</span>
+  object prevProps<span class="token punctuation">,</span> object prevState
+<span class="token punctuation">)</span></code></pre></div>
+<p>条件：更新被应用到 DOM 之后
+用处：可以执行组件更新过后的操作</p>
+<ul>
+<li>以上生命周期存在于 v15.3</li>
+</ul></div><div class="Subline-r0qb95-0 fQDPxI">Tags:  <a href="/tags/react"><strong>react</strong> </a></div><div class="PrevNext__Wrapper-sc-1bejvtc-0 brHMyj"><div class="PrevNext__Next-sc-1bejvtc-2 fepOnV"><span>Next</span><a href="/blog/mongodb常用命令">mongodb常用命令</a></div></div></div></div><footer class="Layout__Footer-vba7vf-0 bsKCRk">© <!-- -->2019<!-- --> by Phobal. All rights reserved. <br/><a href="https://github.com/phobal/phobal.github.io">GitHub Repository</a> <br/><span>Last build: <!-- -->31.01.2019</span></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-post-tsx","jsonName":"blog-react-生命周期-e7c","path":"/blog/react-生命周期"};window.dataPath="667/path---blog-react-生命周期-e-7-c-ed7-Tk8EtiMkkyi5ayJHPu0HmDtUQ";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-e7860e738958d6947bfb.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-6343b08ae213af306e85.js"],"component---src-templates-blog-tsx":["/component---src-templates-blog-tsx.0e4338761429b4eb16ac.css","/component---src-templates-blog-tsx-94d5864689b829292bf5.js"],"component---src-templates-all-category-tsx":["/component---src-templates-all-category-tsx.0e4338761429b4eb16ac.css","/component---src-templates-all-category-tsx-b43bf1062e53e2987872.js"],"component---src-templates-category-tsx":["/component---src-templates-category-tsx.0e4338761429b4eb16ac.css","/component---src-templates-category-tsx-47e945f211fffcb2bb4e.js"],"component---src-templates-all-tag-tsx":["/component---src-templates-all-tag-tsx.0e4338761429b4eb16ac.css","/component---src-templates-all-tag-tsx-9e0ea9f3b2fc26d35ef8.js"],"component---src-templates-tag-tsx":["/component---src-templates-tag-tsx.0e4338761429b4eb16ac.css","/component---src-templates-tag-tsx-ecd7dd6a71793d075149.js"],"component---src-templates-post-tsx":["/component---src-templates-post-tsx.a3f47ba95bfcb7ece2a3.css","/component---src-templates-post-tsx-f283cf95376f69b846f6.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx.0e4338761429b4eb16ac.css","/component---src-pages-404-tsx-209b3683fe53a3b73433.js"],"component---src-pages-contact-tsx":["/component---src-pages-contact-tsx.0e4338761429b4eb16ac.css","/component---src-pages-contact-tsx-c64d4988204fc2ef3aef.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx.0e4338761429b4eb16ac.css","/component---src-pages-index-tsx-f1037b88298721df2c32.js"]};/*]]>*/</script><script src="/webpack-runtime-a3934fd4707e1982fb96.js" async=""></script><script src="/app-e7860e738958d6947bfb.js" async=""></script><script src="/0-2d0cb1e440759cfe9af4.js" async=""></script><script src="/component---src-templates-post-tsx-f283cf95376f69b846f6.js" async=""></script></body></html>
